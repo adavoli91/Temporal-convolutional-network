@@ -1,0 +1,5 @@
+{
+'data': {'len_series': 20, 'size_train': 0.8, 'size_valid': 0.3, 'horizon_forecast': 5},
+'model': {'filter_size': 5, 'frac_dropout': 0.3, 'base_dilation': 2, 'num_filters': 20},
+'training': {'batch_size': 128, 'n_epochs': 300, 'patience': 50, 'min_improve_valid_loss': 0.005}
+}
