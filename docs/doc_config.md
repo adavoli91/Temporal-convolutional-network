@@ -1,3 +1,5 @@
+# Configuration
+
 The configuration file is organized as follows:
 
 - _data_:

@@ -9,3 +9,9 @@ The code is organized in the following sections:
 
 - [Preprocessing](./doc_preprocess.md): this section prepares data for the model;
 - [Strategy filtering](./doc_model.md): this section defines and trains the model.
+
+The phases of preprocessing and training can be controlled by the configuration file [config.yaml](/config.yaml), whose parameters are described in [Configuration](./doc_config.md).
+
+After training with the parameters of [config.yaml](/config.yaml), a typical prediction of the model is like the following one:
+
+![Alt text](./figures_for_readme/result.png "a")

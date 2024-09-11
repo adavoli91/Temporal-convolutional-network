@@ -79,13 +79,9 @@ def main():
         #
         df_result = pd.concat((df_result, pd.DataFrame({'family': [family], 'mape_train': [mape_train], 'mape_valid': [mape_valid],
                                                         'mape_test': [mape_test]})))
-        from IPython import embed
-        embed()
     #
     df_result = df_result.reset_index(drop = True)
     return df_result
 
 if __name__ == '__main__':
     df_result = main()
-    from IPython import embed
-    embed()
