@@ -1,0 +1,13 @@
+site_name: Temporal convolutional network
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+nav:
+  - Overview: index.md
+  - Preprocessing: doc_preprocess.md
+  - Model: doc_model.md
+  - Config: doc_config.md

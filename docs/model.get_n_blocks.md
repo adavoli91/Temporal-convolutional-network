@@ -1,0 +1,1 @@
+::: src.model.get_n_blocks

@@ -1,6 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import torch
 import yaml
 from torch.utils.data import DataLoader

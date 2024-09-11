@@ -7,5 +7,5 @@ The dataset used for this example can be found at [Store Sales - Time Series For
 
 The code is organized in the following sections:
 
-- [Preprocessing](./docs/doc_preprocess.md): this section prepares data for the model;
-- [Strategy filtering](./docs/doc_model.md): this section defines and trains the model.
+- [Preprocessing](./doc_preprocess.md): this section prepares data for the model;
+- [Strategy filtering](./doc_model.md): this section defines and trains the model.
