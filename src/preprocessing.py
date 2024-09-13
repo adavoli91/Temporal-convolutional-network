@@ -10,7 +10,7 @@ def train_test_splitting(df: pd.DataFrame, dict_params: dict) -> (pd.DataFrame, 
 
     Args:
         df: Dataframe containing time series. The column representing the main series should be called `y`.
-        dict_params: Dictionary containing information about the model architecture.
+        dict_params: Dictionary containing information about data.
 
     Returns:
         df_train: Dataframe corresponding to training set.
@@ -37,7 +37,7 @@ def get_x_y(df: pd.DataFrame, df_future: pd.DataFrame, dict_params: dict, test_s
     Args:
         df: Dataframe containing time series. The column representing the main series should be called `y`.
         df_future: Same as `df`, but corresponding to its future (e.g., `df_valid` could be the "future" of `df_train`).
-        dict_params: Dictionary containing information about the model architecture.
+        dict_params: Dictionary containing information about data.
         test_set: Whether `df` is the dataframe corresponding to test set.
         horizon_forecast: Length of the series to be predicted.
 

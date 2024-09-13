@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import torch
 import yaml
 from torch.utils.data import DataLoader
@@ -62,7 +63,6 @@ def main():
         len_series = dataloader_train.dataset.x.shape[2]
         num_feat = dataloader_train.dataset.x.shape[1]
         len_output = dataloader_train.dataset.y.shape[2]
-        # model = TCN(len_series = len_series, num_chan = num_chan, dict_params = dict_params, len_input=100, len_output = 7)
         model = TCN(len_series = len_series, num_feat = num_feat, len_output = len_output, dict_params = dict_params,
                     gated_activation = False)
         #
@@ -79,6 +79,15 @@ def main():
         #
         df_result = pd.concat((df_result, pd.DataFrame({'family': [family], 'mape_train': [mape_train], 'mape_valid': [mape_valid],
                                                         'mape_test': [mape_test]})))
+        #
+        plt.figure(figsize = [10, 6])
+        plt.plot(np.unique(date_y_test), y_true_test, label = 'True', color = 'r')
+        plt.plot(np.unique(date_y_test), y_hat_test, label = 'Predicted', color = 'b')
+        plt.xlabel('Date', fontsize = 16)
+        plt.ylabel('Sales', fontsize = 16)
+        plt.xticks(rotation = 45)
+        plt.legend()
+        plt.savefig('../docs/figures_for_readme/result', bbox_inches = 'tight')
     #
     df_result = df_result.reset_index(drop = True)
     return df_result

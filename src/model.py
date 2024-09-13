@@ -140,7 +140,7 @@ class TrainTCN():
         
         Args:
             model: PyTorch model.
-            dict_params: Dictionary containing information about the model architecture.
+            dict_params: Dictionary containing information about the training strategy.
             dataloader_train: Dataloader containing training data.
             dataloader_valid: Dataloader containing validation data.
             
